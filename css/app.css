@@ -7792,10 +7792,40 @@ body {
   #landing-bg {
     padding: 150px 0;
   }
+
+  /* line 48, ../sass/_custom.sass */
+  #subscribeForm {
+    margin-top: 20px;
+  }
+
+  /* line 50, ../sass/_custom.sass */
+  h1 {
+    font-size: 4rem;
+  }
+
+  /* line 52, ../sass/_custom.sass */
+  p {
+    font-size: 1.1rem;
+  }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 49, ../sass/_custom.sass */
+  /* line 56, ../sass/_custom.sass */
   #landing-bg {
     padding: 200px 0;
+  }
+
+  /* line 58, ../sass/_custom.sass */
+  #subscribeForm {
+    margin-top: 40px;
+  }
+
+  /* line 60, ../sass/_custom.sass */
+  h1 {
+    font-size: 6rem;
+  }
+
+  /* line 62, ../sass/_custom.sass */
+  p {
+    font-size: 1.5rem;
   }
 }
