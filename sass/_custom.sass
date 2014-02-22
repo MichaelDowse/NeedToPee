@@ -13,12 +13,16 @@ body
 
 #landing-bg
 	background: url(../images/bg-header.jpg) center center no-repeat
-	padding: 100px 0
+	padding-top: 100px
+	height: 100%
 #tagline	
 	h1,p
 		color: $white
 	h1
 		text-align: center
+
+#iphone-app
+	text-align: center
 
 #subscribeInput, #subscribeBtn
 	float: left
@@ -38,23 +42,29 @@ body
 		width: 200px
 	#subscribeBtn
 		width: 80px
+	#iphone-app 
+		img
+			width: 40%
 @media #{$medium-up}
 	#subscribeInput
 		width: 200px
 	#subscribeBtn
 		width: 80px
-	#landing-bg
-		padding: 150px 0
+	// #landing-bg
+	// 	padding: 150px 0
 	#subscribeForm
 		margin-top: 20px
 	h1
 		font-size: 4rem
 	p
 		font-size: 1.1rem
+	#iphone-app 
+		img
+			width: 60%
 
 @media #{$large-up}
-	#landing-bg
-		padding: 200px 0
+	// #landing-bg
+	// 	padding: 200px 0
 	#subscribeForm
 		margin-top: 40px
 	h1
