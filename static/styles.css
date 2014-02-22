@@ -1,5 +1,6 @@
 /* placeholder styles for examples */
 #map {
-  /*height: 500px;*/
-  background: blue;
+  height     : 300px;
+  width      : 300px;
+  background : blue;
 }
