@@ -7735,33 +7735,33 @@ body {
 /* line 14, ../sass/_custom.sass */
 #landing-bg {
   background: url(../images/bg-header.jpg) center center no-repeat;
+  height: 100%;
 }
 
-/* line 17, ../sass/_custom.sass */
+/* line 18, ../sass/_custom.sass */
 #tagline h1, #tagline p {
   color: #eff1e7;
 }
-/* line 19, ../sass/_custom.sass */
+/* line 20, ../sass/_custom.sass */
 #tagline h1 {
   text-align: center;
 }
 
-/* line 22, ../sass/_custom.sass */
+/* line 23, ../sass/_custom.sass */
 #iphone-app {
   text-align: center;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 27, ../sass/_custom.sass */
+  /* line 28, ../sass/_custom.sass */
   #iphone-app img {
     width: 40%;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 30, ../sass/_custom.sass */
+  /* line 31, ../sass/_custom.sass */
   #landing-bg {
     padding-top: 100px;
-    height: 100%;
   }
 
   /* line 33, ../sass/_custom.sass */
