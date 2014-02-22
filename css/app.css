@@ -65,7 +65,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1500,7 +1500,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 36, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2199,7 +2199,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3852,7 +3852,7 @@ kbd {
 /* line 87, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4417,7 +4417,7 @@ ul.pagination li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
 }
 /* line 139, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4427,7 +4427,7 @@ ul.pagination li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
 }
 /* line 140, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -4618,7 +4618,7 @@ dialog[open] {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
 }
 /* line 57, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -4638,7 +4638,7 @@ dialog[open] {
 .side-nav li.active > a:first-child:not(.button) {
   color: #1cc7ff;
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
 }
 /* line 74, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -4807,7 +4807,7 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5153,7 +5153,7 @@ table tfoot tr td {
   padding-right: 2rem;
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 43, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -5577,7 +5577,7 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   background: #333333;
@@ -6111,7 +6111,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
+@media only screen and (min-width: 120.063em) and (max-width: 999999999999) {
   /* line 172, ../bower_components/foundation/scss/foundation/components/_type.scss */
   .xxlarge-only-text-left {
     text-align: left !important;
@@ -6219,7 +6219,7 @@ p aside {
 /* Default header styles */
 /* line 260, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #222222;
@@ -6791,7 +6791,7 @@ blockquote p {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
+@media only screen and (min-width: 120.063em) and (max-width: 999999999999) {
   /* line 172, ../bower_components/foundation/scss/foundation/components/_type.scss */
   .xxlarge-only-text-left {
     text-align: left !important;
@@ -7730,23 +7730,72 @@ th.hide-for-touch {
 /* line 10, ../sass/_custom.sass */
 body {
   background-color: #4a8d5c;
-  font-family: "Lato", sans-serif;
 }
 
 /* line 14, ../sass/_custom.sass */
+#landing-bg {
+  background: url(../images/bg-header.jpg) center center no-repeat;
+  padding: 100px 0;
+}
+
+/* line 18, ../sass/_custom.sass */
+#tagline h1, #tagline p {
+  color: #eff1e7;
+}
+/* line 20, ../sass/_custom.sass */
+#tagline h1 {
+  text-align: center;
+}
+
+/* line 23, ../sass/_custom.sass */
 #subscribeInput, #subscribeBtn {
   float: left;
   height: 40px;
 }
 
-/* line 18, ../sass/_custom.sass */
-#subscribeInput {
-  width: 30%;
-}
-
-/* line 20, ../sass/_custom.sass */
+/* line 27, ../sass/_custom.sass */
 #subscribeBtn {
-  width: 10%;
   border: none;
   background-color: #d9593a;
+  color: #eff1e7;
+}
+
+/* line 32, ../sass/_custom.sass */
+#subscribeForm {
+  margin: 0 auto;
+  width: 300px;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 37, ../sass/_custom.sass */
+  #subscribeInput {
+    width: 200px;
+  }
+
+  /* line 39, ../sass/_custom.sass */
+  #subscribeBtn {
+    width: 80px;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 42, ../sass/_custom.sass */
+  #subscribeInput {
+    width: 200px;
+  }
+
+  /* line 44, ../sass/_custom.sass */
+  #subscribeBtn {
+    width: 80px;
+  }
+
+  /* line 46, ../sass/_custom.sass */
+  #landing-bg {
+    padding: 150px 0;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 49, ../sass/_custom.sass */
+  #landing-bg {
+    padding: 200px 0;
+  }
 }

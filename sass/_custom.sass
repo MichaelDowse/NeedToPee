@@ -9,15 +9,42 @@ $orange: #D9593A
 
 body
 	background-color: $green
-	font-family: 'Lato', sans-serif
+	// font-family: 'Lato', sans-serif
+
+#landing-bg
+	background: url(../images/bg-header.jpg) center center no-repeat
+	padding: 100px 0
+#tagline	
+	h1,p
+		color: $white
+	h1
+		text-align: center
 
 #subscribeInput, #subscribeBtn
 	float: left
 	height: 40px
 
-#subscribeInput
-	width: 30%
 #subscribeBtn
-	width: 10%
 	border: none
 	background-color: $orange 
+	color: $white
+
+#subscribeForm
+	margin: 0 auto
+	width: 300px
+
+@media #{$small-only}
+	#subscribeInput
+		width: 200px
+	#subscribeBtn
+		width: 80px
+@media #{$medium-up}
+	#subscribeInput
+		width: 200px
+	#subscribeBtn
+		width: 80px
+	#landing-bg
+		padding: 150px 0
+@media #{$large-up}
+	#landing-bg
+		padding: 200px 0
