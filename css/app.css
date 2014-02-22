@@ -7737,69 +7737,89 @@ body {
   background: url(../images/bg-header.jpg) center center no-repeat;
   height: 100%;
 }
-
 /* line 17, ../sass/_custom.sass */
-#tagline {
-  text-align: center;
-}
-/* line 19, ../sass/_custom.sass */
-#tagline h1, #tagline p {
+#landing-bg h1, #landing-bg p {
   color: #eff1e7;
 }
-/* line 21, ../sass/_custom.sass */
-#tagline h1 {
+/* line 19, ../sass/_custom.sass */
+#landing-bg h1 {
   text-align: center;
 }
 
-/* line 24, ../sass/_custom.sass */
+/* line 22, ../sass/_custom.sass */
 #iphone-app {
   text-align: center;
 }
 
-/* line 27, ../sass/_custom.sass */
-#btn-try {
+/* line 25, ../sass/_custom.sass */
+.btn-try {
   background-color: #d9593a;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 32, ../sass/_custom.sass */
+  /* line 30, ../sass/_custom.sass */
   #iphone-app img {
     width: 40%;
   }
+
+  /* line 32, ../sass/_custom.sass */
+  #tagline {
+    text-align: center;
+  }
+
+  /* line 34, ../sass/_custom.sass */
+  #btn-wrapper {
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 35, ../sass/_custom.sass */
+  /* line 39, ../sass/_custom.sass */
   #landing-bg {
     padding-top: 100px;
   }
 
-  /* line 37, ../sass/_custom.sass */
+  /* line 41, ../sass/_custom.sass */
+  #tagline {
+    text-align: center;
+  }
+  /* line 43, ../sass/_custom.sass */
+  #tagline button {
+    margin: 0 auto;
+  }
+  /* line 45, ../sass/_custom.sass */
+  #tagline p {
+    text-align: left;
+  }
+
+  /* line 48, ../sass/_custom.sass */
   h1 {
     font-size: 4rem;
   }
 
-  /* line 39, ../sass/_custom.sass */
+  /* line 50, ../sass/_custom.sass */
   p {
     font-size: 1.1rem;
   }
 
-  /* line 42, ../sass/_custom.sass */
+  /* line 53, ../sass/_custom.sass */
   #iphone-app img {
     width: 60%;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 46, ../sass/_custom.sass */
+  /* line 57, ../sass/_custom.sass */
   #tagline {
     margin-top: 50px;
+    text-align: center;
   }
 
-  /* line 48, ../sass/_custom.sass */
+  /* line 60, ../sass/_custom.sass */
   h1 {
     font-size: 6rem;
   }
 
-  /* line 50, ../sass/_custom.sass */
+  /* line 62, ../sass/_custom.sass */
   p {
     font-size: 1.5rem;
   }

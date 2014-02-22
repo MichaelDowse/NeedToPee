@@ -14,8 +14,6 @@ body
 #landing-bg
 	background: url(../images/bg-header.jpg) center center no-repeat
 	height: 100%
-#tagline
-	text-align: center	
 	h1,p
 		color: $white
 	h1
@@ -24,16 +22,29 @@ body
 #iphone-app
 	text-align: center
 
-#btn-try
+.btn-try
 	background-color: $orange
 
 @media #{$small-only}
 	#iphone-app 
 		img
 			width: 40%
+	#tagline
+		text-align: center
+	#btn-wrapper
+		text-align: center
+		margin-top: 30px
+
 @media #{$medium-up}
 	#landing-bg
 		padding-top: 100px
+	#tagline
+		text-align: center
+		button
+			margin: 0 auto
+		p
+			text-align: left
+
 	h1
 		font-size: 4rem
 	p
@@ -45,6 +56,7 @@ body
 @media #{$large-up}
 	#tagline
 		margin-top: 50px
+		text-align: center
 	h1
 		font-size: 6rem
 	p
