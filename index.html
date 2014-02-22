@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:ng="http://angularjs.org" ng-app>
+<html xmlns:ng="http://angularjs.org" ng-app="spicyApp1">
   <head>
     <meta charset="utf-8">
     <title>Beta - Maps checking</title>
@@ -17,10 +17,13 @@
     <div id="map">
       <!-- map placement in javascript -->
     </div>
-    <div ng-app="peeApp">
-      <p>I can add {{ 1 + 2 }}</p>
-      <p ng-controller="peeController">I'm afraid I cannot let you do that {{ properNoun }}.</p>
+
+    <div ng-controller="SpicyCtrl">
+      <button ng-click="chiliSpicy()">Chili</button>
+      <button ng-click="jalapenoSpicy()">Jalapeño</button>
+      <p>The food is {{spice}} spicy!</p>
     </div>
+
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
     <script src="static/script.js"></script>

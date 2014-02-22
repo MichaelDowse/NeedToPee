@@ -1,8 +1,13 @@
-var app = angular.module("peeApp", [])
+var myApp = angular.module('spicyApp1', []);
 
-app.controller("peeController", ['$scope', function($scope) {
-  alert('lert');
-  $scope.properNoun = 'Dave';
+myApp.controller('SpicyCtrl', ['$scope', function($scope){
+  $scope.spice = 'very';
+  $scope.chiliSpicy = function() {
+    $scope.spice = 'chili';
+  };
+  $scope.jalapenoSpicy = function() {
+    $scope.spice = 'jalapeño';
+  };
 }]);
 
 //(function(L){
