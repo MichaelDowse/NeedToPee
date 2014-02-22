@@ -1,8 +1,11 @@
 <!doctype html>
-<html>
+<html xmlns:ng="http://angularjs.org" ng-app>
   <head>
+    <meta charset="utf-8">
     <title>Beta - Maps checking</title>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="static/styles.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
   </head>
   <body>
     <!--
@@ -11,16 +14,15 @@
       map layout by leafletjs
         http://leafletjs.com/
     -->
-    <style type="text/css">
-      #map {
-        height: 500px;
-        background: blue;
-      }
-    </style>
     <div id="map">
       <!-- map placement in javascript -->
     </div>
+    <div ng-app="peeApp">
+      <p>I can add {{ 1 + 2 }}</p>
+      <p ng-controller="peeController">I'm afraid I cannot let you do that {{ properNoun }}.</p>
+    </div>
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-    <script type="text/javascript" src="static/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="static/script.js"></script>
   </body>
 </html>
