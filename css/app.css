@@ -7818,19 +7818,29 @@ body {
   #iphone-app img {
     width: 60%;
   }
+
+  /* line 64, ../sass/_custom.sass */
+  #tagline {
+    margin-top: 50px;
+  }
 }
 @media only screen and (min-width: 64.063em) {
   /* line 68, ../sass/_custom.sass */
+  #tagline {
+    margin-top: 50px;
+  }
+
+  /* line 70, ../sass/_custom.sass */
   #subscribeForm {
     margin-top: 40px;
   }
 
-  /* line 70, ../sass/_custom.sass */
+  /* line 72, ../sass/_custom.sass */
   h1 {
     font-size: 6rem;
   }
 
-  /* line 72, ../sass/_custom.sass */
+  /* line 74, ../sass/_custom.sass */
   p {
     font-size: 1.5rem;
   }
