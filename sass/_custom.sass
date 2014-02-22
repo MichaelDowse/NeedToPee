@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Lato)
+
+// Variable
+$green: #4A8D5C
+$gray: #BFBBA4
+$white: #EFF1E7
+$brown: #725E54
+$orange: #D9593A
+
+body
+	background-color: $green
+	// font-family: 'Lato', sans-serif
+
+#landing-bg
+	background: url(../images/bg-header.jpg) center center no-repeat
+	height: 100%
+	h1,p
+		color: $white
+	h1
+		text-align: center
+
+#iphone-app
+	text-align: center
+
+.btn-try
+	background-color: $orange
+
+@media #{$small-only}
+	#iphone-app 
+		img
+			width: 40%
+	#tagline
+		text-align: center
+	#btn-wrapper
+		text-align: center
+		margin-top: 30px
+
+@media #{$medium-up}
+	#landing-bg
+		padding-top: 100px
+	#tagline
+		text-align: center
+		button
+			margin: 0 auto
+		p
+			text-align: left
+
+	h1
+		font-size: 4rem
+	p
+		font-size: 1.1rem
+	#iphone-app 
+		img
+			width: 60%
+
+@media #{$large-up}
+	#tagline
+		margin-top: 50px
+		text-align: center
+	h1
+		font-size: 6rem
+	p
+		font-size: 1.5rem
