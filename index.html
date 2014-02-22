@@ -18,14 +18,15 @@
       <!-- map placement in javascript -->
     </div>
 
-    <div ng-controller="SpicyCtrl">
-      <button ng-click="chiliSpicy()">Chili</button>
-      <button ng-click="jalapenoSpicy()">Jalapeño</button>
-      <p>The food is {{spice}} spicy!</p>
+    <div ng-controller="PeeCtrl">
+      <pre style="background:orange">
+        {{ locationData | json }}
+      </pre>
     </div>
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.min.js"></script>
     <script src="static/script.js"></script>
   </body>
 </html>
