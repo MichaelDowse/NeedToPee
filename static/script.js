@@ -34,18 +34,12 @@ myApp.controller('PeeCtrl', ['$scope', '$resource', function($scope, $resource){
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // add a marker in the given location, attach some popup content to it and open the popup
-  //L.marker([51.5, -0.09])
-  //    .addTo(map)
-  //    .bindPopup('These are no the droids you are looking for')
-  //    .openPopup();
-
-  //if ( Modernizr.geolocation ) {
-  //  console.log('omg');
-  //  navigator.geolocation.getCurrentPosition(
-  //    function(position){
-  //      console.log('oh hai', position);
-  //    }
-  //  );
-  //}
+  angular.forEach( $scope.locationData.features, function dropMarker(datum) {
+    console.log(datum);
+    if ( datum && datum.geometry && datum.geometry.coordinates ) {
+      L.marker(datum.geometry.coordinates)
+        .addTo(map)
+        .bindPopup('Loo!')
+    }
+  });
 }]);
