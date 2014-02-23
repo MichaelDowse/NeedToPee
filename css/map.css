@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'Pictos';
+	src: url('fonts/pictos-web.eot');
+	src: local('☺'), url('fonts/pictos-web.woff') format('woff'), url('fonts/pictos-web.ttf') format('truetype'), url('fonts/pictos-web.svg#webfontIyfZbseF') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+  font-family: 'Pictos';
+}
 /* placeholder styles for examples */
 #map {
   /* set later by jquery too... */
@@ -6,9 +17,10 @@
 }
 
 #header {
-  height: 100px;
+  height: 99px;
   padding-left: 30px;
   padding-right: 30px;
+  border-bottom: 1px solid #ccc;
 }
 #header .icon {
   float: left;
