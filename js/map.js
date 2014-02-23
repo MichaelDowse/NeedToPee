@@ -10,6 +10,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   //$scope.toilets = toiletResource.get();
 
   var userLocation = null;
+  var markers = [];
   $scope.locationData = wellingtonSampleData.vectorQuery.layers['2219'];
 
   // Fix geometry
@@ -41,6 +42,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       var seed   = new Date().getTime()
       var rating = Math.floor( Math.random( seed ) * 5 ) + 1; // 1 to 5
       var marker = L.marker(datum.geometry.coordinates).addTo(map);
+      markers.push( marker );
 
       var stars;
       switch(rating) {
@@ -67,6 +69,32 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       "lng": gps.coords.longitude
     };
     map.setView(userLocation, 13);
+
+    // Find closest loo
+    var minDistance = 99999;
+    var closestMarker = markers[0];
+
+    angular.forEach( markers, function calculateDistance(thisMarker) {
+      var thisPopup = thisMarker.getPopup();
+      var howFar = thisMarker.getLatLng().distanceTo( userLocation );
+      minDistance = Math.min( minDistance, howFar );
+
+      thisPopup.setContent(
+        thisPopup.getContent()
+        + '<p>Distance to loo: ' + Math.round(howFar) + ' metres</p>'
+      );
+
+      if ( minDistance === howFar ) {
+        closestMarker = thisMarker;
+      }
+    });
+
+    closestMarker.getPopup().setContent(
+      '<h2 class="closest-loo">Closest toilet found!</h2>'
+      + closestMarker.getPopup().getContent()
+    );
+
+    closestMarker.openPopup();
   });
 }]);
 
