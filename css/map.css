@@ -42,6 +42,10 @@ body {
   display:none;
 }
 
+.leaflet-popup-content-wrapper {
+  border-radius: 5px;
+}
+
 .leaflet-popup-content {
   margin: 10px;
 }
