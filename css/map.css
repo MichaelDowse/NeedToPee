@@ -50,6 +50,7 @@ body {
   margin: 10px;
 }
 
+.leaflet-popup-content p.hours,
 .leaflet-popup-content p.distance {
   border-top: 1px solid #ccc;
   padding-top: 5px;
