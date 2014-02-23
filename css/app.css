@@ -7802,12 +7802,12 @@ body {
 
   /* line 57, ../sass/_custom.sass */
   #tagline {
+    margin-top: 30px;
     text-align: center;
   }
-  /* line 59, ../sass/_custom.sass */
+  /* line 60, ../sass/_custom.sass */
   #tagline .btn-try {
     margin: 0 auto;
-    padding: 25px 0;
   }
   /* line 62, ../sass/_custom.sass */
   #tagline p {
