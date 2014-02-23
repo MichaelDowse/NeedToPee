@@ -57,9 +57,10 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       var bubbleContent = '';
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
       bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
+      bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
-      window.fu = datum.properties;
+      window.loo = datum.properties;
     }
   });
 
