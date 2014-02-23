@@ -1,6 +1,7 @@
 /* placeholder styles for examples */
 #map {
-  height     : 300px;
-  width      : 300px;
-  background : blue;
+  /* set later by jquery too... */
+  height: 300px;
+  background: lightgreen;
 }
+body { margin: 0; }
