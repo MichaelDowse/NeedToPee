@@ -45,8 +45,8 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
   navigator.geolocation.getCurrentPosition( function setCenter(gps){
     var centerOn = {
-      "lat": gps.coords.latatude,
-      "lng": gps.coords.longatude
+      "lat": gps.coords.latitude,
+      "lng": gps.coords.longitude
     };
     console.log(
       centerMap,
