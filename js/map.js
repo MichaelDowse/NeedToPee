@@ -90,8 +90,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     });
 
     closestMarker.getPopup().setContent(
-      '<h2 class="closest-loo">Closest toilet found!</h2>'
-      + closestMarker.getPopup().getContent()
+      closestMarker.getPopup().getContent()
     );
 
     closestMarker.openPopup();
