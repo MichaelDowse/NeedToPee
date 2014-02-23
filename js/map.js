@@ -57,8 +57,3 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     map.setView(centerOn, 13);
   });
 }]);
-
-// hack hack, div needs to take up the whole page ;-)
-$('#map').css({
-  'height': $(document).height()
-});
