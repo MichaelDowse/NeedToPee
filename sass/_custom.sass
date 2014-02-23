@@ -24,6 +24,15 @@ body
 
 .btn-try
 	background-color: $orange
+	width: 200px
+	height: 40px
+	color: $white
+	padding: 10px
+	&:hover
+		height: 80px
+		width: 80px
+		background: url('../images/icon-toilet.png') center center no-repeat transparent
+		text-indent: -9999px
 
 @media #{$small-only}
 	#iphone-app 
@@ -34,14 +43,22 @@ body
 	#btn-wrapper
 		text-align: center
 		margin-top: 30px
+	#btn-try-small
+		background-color: $orange
+		display: block
+		width: 200px
+		padding: 25px 0
+		color: $white
+		margin: 30px auto
 
 @media #{$medium-up}
 	#landing-bg
 		padding-top: 100px
 	#tagline
 		text-align: center
-		button
+		.btn-try
 			margin: 0 auto
+			padding: 25px 0
 		p
 			text-align: left
 

@@ -7754,72 +7754,94 @@ body {
 /* line 25, ../sass/_custom.sass */
 .btn-try {
   background-color: #d9593a;
+  width: 200px;
+  height: 40px;
+  color: #eff1e7;
+  padding: 10px;
+}
+/* line 31, ../sass/_custom.sass */
+.btn-try:hover {
+  height: 80px;
+  width: 80px;
+  background: url("../images/icon-toilet.png") center center no-repeat transparent;
+  text-indent: -9999px;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 30, ../sass/_custom.sass */
+  /* line 39, ../sass/_custom.sass */
   #iphone-app img {
     width: 40%;
-  }
-
-  /* line 32, ../sass/_custom.sass */
-  #tagline {
-    text-align: center;
-  }
-
-  /* line 34, ../sass/_custom.sass */
-  #btn-wrapper {
-    text-align: center;
-    margin-top: 30px;
-  }
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 39, ../sass/_custom.sass */
-  #landing-bg {
-    padding-top: 100px;
   }
 
   /* line 41, ../sass/_custom.sass */
   #tagline {
     text-align: center;
   }
+
   /* line 43, ../sass/_custom.sass */
-  #tagline button {
-    margin: 0 auto;
+  #btn-wrapper {
+    text-align: center;
+    margin-top: 30px;
   }
-  /* line 45, ../sass/_custom.sass */
+
+  /* line 46, ../sass/_custom.sass */
+  #btn-try-small {
+    background-color: #d9593a;
+    display: block;
+    width: 200px;
+    padding: 25px 0;
+    color: #eff1e7;
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 55, ../sass/_custom.sass */
+  #landing-bg {
+    padding-top: 100px;
+  }
+
+  /* line 57, ../sass/_custom.sass */
+  #tagline {
+    text-align: center;
+  }
+  /* line 59, ../sass/_custom.sass */
+  #tagline .btn-try {
+    margin: 0 auto;
+    padding: 25px 0;
+  }
+  /* line 62, ../sass/_custom.sass */
   #tagline p {
     text-align: left;
   }
 
-  /* line 48, ../sass/_custom.sass */
+  /* line 65, ../sass/_custom.sass */
   h1 {
     font-size: 4rem;
   }
 
-  /* line 50, ../sass/_custom.sass */
+  /* line 67, ../sass/_custom.sass */
   p {
     font-size: 1.1rem;
   }
 
-  /* line 53, ../sass/_custom.sass */
+  /* line 70, ../sass/_custom.sass */
   #iphone-app img {
     width: 60%;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 57, ../sass/_custom.sass */
+  /* line 74, ../sass/_custom.sass */
   #tagline {
     margin-top: 50px;
     text-align: center;
   }
 
-  /* line 60, ../sass/_custom.sass */
+  /* line 77, ../sass/_custom.sass */
   h1 {
     font-size: 6rem;
   }
 
-  /* line 62, ../sass/_custom.sass */
+  /* line 79, ../sass/_custom.sass */
   p {
     font-size: 1.5rem;
   }
