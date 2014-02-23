@@ -37,9 +37,19 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
   angular.forEach( $scope.locationData.features, function dropMarker(datum) {
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
-      L.marker(datum.geometry.coordinates)
-        .addTo(map)
-        .bindPopup('Loo!')
+      var seed   = new Date().getTime()
+      var rating = Math.floor( Math.random( seed ) * 5 ) + 1; // 1 to 5
+      var marker = L.marker(datum.geometry.coordinates).addTo(map);
+
+      var stars;
+      switch(rating) {
+        case 1 : stars = 'S';     break;
+        case 2 : stars = 'SS';    break;
+        case 3 : stars = 'SSS';   break;
+        case 4 : stars = 'SSSS';  break;
+        case 5 : stars = 'SSSSS'; break;
+      }
+      marker.bindPopup('Rating: ' + stars );
     }
   });
 
