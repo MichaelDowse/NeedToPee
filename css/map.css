@@ -38,12 +38,17 @@ body {
   margin:0;
 }
 
+.leaflet-popup-close-button {
+  display:none;
+}
+
 .leaflet-popup-content {
   margin: 10px;
 }
 
 .leaflet-popup h2 {
   padding-bottom: 5px;
+  margin-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
 
