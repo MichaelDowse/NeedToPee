@@ -37,3 +37,22 @@
 body {
   margin:0;
 }
+
+.leaflet-popup-content {
+  margin: 10px;
+}
+
+.leaflet-popup h2 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.leaflet-popup-content p {
+  margin: 0;
+  font-size: 30px;
+  color: #FF0;
+}
+
+.leaflet-popup-content p .grey {
+  color: #ccc;
+}

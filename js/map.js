@@ -44,18 +44,17 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
       var stars;
       switch(rating) {
-        case 1 : stars = 'S';     break;
-        case 2 : stars = 'SS';    break;
-        case 3 : stars = 'SSS';   break;
-        case 4 : stars = 'SSSS';  break;
-        case 5 : stars = 'SSSSS'; break;
+        case 1 : stars = 'S <span class="grey">S S S S</span>';     break;
+        case 2 : stars = 'S S <span class="grey">S S S</span>';    break;
+        case 3 : stars = 'S S S <span class="grey">S S</span>';   break;
+        case 4 : stars = 'S S S S <span class="grey">S</span>';  break;
+        case 5 : stars = 'S S S S S'; break;
       }
 
       // FIXME this should be templated
       var bubbleContent = '';
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
-      bubbleContent += '<p>Rating: <span class="icon">' + stars + '</span></p>';
-      bubbleContent += '<p>' + datum.properties.Location + '</p>';
+      bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
 
       marker.bindPopup( bubbleContent );
       window.fu = datum.properties;
