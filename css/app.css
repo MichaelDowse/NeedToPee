@@ -7735,23 +7735,22 @@ body {
 /* line 14, ../sass/_custom.sass */
 #landing-bg {
   background: url(../images/bg-header.jpg) center center no-repeat;
-  height: 100%;
 }
-/* line 17, ../sass/_custom.sass */
+/* line 16, ../sass/_custom.sass */
 #landing-bg h1, #landing-bg p {
   color: #eff1e7;
 }
-/* line 19, ../sass/_custom.sass */
+/* line 18, ../sass/_custom.sass */
 #landing-bg h1 {
   text-align: center;
 }
 
-/* line 22, ../sass/_custom.sass */
+/* line 21, ../sass/_custom.sass */
 #iphone-app {
   text-align: center;
 }
 
-/* line 25, ../sass/_custom.sass */
+/* line 24, ../sass/_custom.sass */
 .btn-try {
   background-color: #d9593a;
   width: 200px;
@@ -7759,7 +7758,7 @@ body {
   color: #eff1e7;
   padding: 10px;
 }
-/* line 31, ../sass/_custom.sass */
+/* line 30, ../sass/_custom.sass */
 .btn-try:hover {
   height: 80px;
   width: 80px;
@@ -7768,23 +7767,23 @@ body {
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 39, ../sass/_custom.sass */
+  /* line 38, ../sass/_custom.sass */
   #iphone-app img {
     width: 40%;
   }
 
-  /* line 41, ../sass/_custom.sass */
+  /* line 40, ../sass/_custom.sass */
   #tagline {
     text-align: center;
   }
 
-  /* line 43, ../sass/_custom.sass */
+  /* line 42, ../sass/_custom.sass */
   #btn-wrapper {
     text-align: center;
     margin-top: 30px;
   }
 
-  /* line 46, ../sass/_custom.sass */
+  /* line 45, ../sass/_custom.sass */
   #btn-try-small {
     background-color: #d9593a;
     display: block;
@@ -7795,53 +7794,53 @@ body {
   }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 55, ../sass/_custom.sass */
+  /* line 54, ../sass/_custom.sass */
   #landing-bg {
     padding-top: 100px;
   }
 
-  /* line 57, ../sass/_custom.sass */
+  /* line 56, ../sass/_custom.sass */
   #tagline {
     margin-top: 30px;
     text-align: center;
   }
-  /* line 60, ../sass/_custom.sass */
+  /* line 59, ../sass/_custom.sass */
   #tagline .btn-try {
     margin: 0 auto;
   }
-  /* line 62, ../sass/_custom.sass */
+  /* line 61, ../sass/_custom.sass */
   #tagline p {
     text-align: left;
   }
 
-  /* line 65, ../sass/_custom.sass */
+  /* line 64, ../sass/_custom.sass */
   h1 {
     font-size: 4rem;
   }
 
-  /* line 67, ../sass/_custom.sass */
+  /* line 66, ../sass/_custom.sass */
   p {
     font-size: 1.1rem;
   }
 
-  /* line 70, ../sass/_custom.sass */
+  /* line 69, ../sass/_custom.sass */
   #iphone-app img {
     width: 60%;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 74, ../sass/_custom.sass */
+  /* line 73, ../sass/_custom.sass */
   #tagline {
     margin-top: 50px;
     text-align: center;
   }
 
-  /* line 77, ../sass/_custom.sass */
+  /* line 76, ../sass/_custom.sass */
   h1 {
     font-size: 6rem;
   }
 
-  /* line 79, ../sass/_custom.sass */
+  /* line 78, ../sass/_custom.sass */
   p {
     font-size: 1.5rem;
   }
