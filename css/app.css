@@ -7796,6 +7796,7 @@ body {
 @media only screen and (min-width: 40.063em) {
   /* line 54, ../sass/_custom.sass */
   #landing-bg {
+    height: 100%;
     padding-top: 100px;
   }
 
