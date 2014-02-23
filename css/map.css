@@ -50,6 +50,12 @@ body {
   margin: 10px;
 }
 
+.leaflet-popup-content .distance {
+  border-top: 1px solid #ccc;
+  color: #000;
+  font-size: 16px;
+}
+
 .leaflet-popup h2 {
   padding-bottom: 5px;
   margin-bottom: 5px;
