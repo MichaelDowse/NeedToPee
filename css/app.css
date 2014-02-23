@@ -7831,17 +7831,22 @@ body {
 }
 @media only screen and (min-width: 64.063em) {
   /* line 74, ../sass/_custom.sass */
+  #landing-bg {
+    height: 100%;
+  }
+
+  /* line 76, ../sass/_custom.sass */
   #tagline {
     margin-top: 50px;
     text-align: center;
   }
 
-  /* line 77, ../sass/_custom.sass */
+  /* line 79, ../sass/_custom.sass */
   h1 {
     font-size: 6rem;
   }
 
-  /* line 79, ../sass/_custom.sass */
+  /* line 81, ../sass/_custom.sass */
   p {
     font-size: 1.5rem;
   }
