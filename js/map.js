@@ -50,9 +50,15 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
         case 4 : stars = 'SSSS';  break;
         case 5 : stars = 'SSSSS'; break;
       }
-      //marker.bindPopup('Rating: ' + stars );
-      marker.bindPopup('Rating: <span class="icon">' + stars + '</span>');
 
+      // FIXME this should be templated
+      var bubbleContent = '';
+      bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
+      bubbleContent += '<p>Rating: <span class="icon">' + stars + '</span></p>';
+      bubbleContent += '<p>' + datum.properties.Location + '</p>';
+
+      marker.bindPopup( bubbleContent );
+      window.fu = datum.properties;
     }
   });
 
@@ -61,7 +67,6 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       "lat": gps.coords.latitude,
       "lng": gps.coords.longitude
     };
-    //console.log( "centre stage is " + JSON.stringify(centerMap) );
     map.setView(userLocation, 13);
   });
 }]);
