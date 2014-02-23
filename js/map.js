@@ -9,6 +9,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   //var toiletResource = $resource('static/wellington.json');
   //$scope.toilets = toiletResource.get();
 
+  var userLocation = null;
   $scope.locationData = wellingtonSampleData.vectorQuery.layers['2219'];
 
   // Fix geometry
@@ -49,22 +50,19 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
         case 4 : stars = 'SSSS';  break;
         case 5 : stars = 'SSSSS'; break;
       }
-      marker.bindPopup('Rating: ' + stars );
+      //marker.bindPopup('Rating: ' + stars );
+      marker.bindPopup('Rating: <span class="icon">' + stars + '</span>');
+
     }
   });
 
   navigator.geolocation.getCurrentPosition( function setCenter(gps){
-    var centerOn = {
+    userLocation = {
       "lat": gps.coords.latitude,
       "lng": gps.coords.longitude
     };
-    console.log(
-      centerMap,
-      'vs',
-      $scope.firstRandom.geometry.coordinates
-    );
     //console.log( "centre stage is " + JSON.stringify(centerMap) );
-    map.setView(centerOn, 13);
+    map.setView(userLocation, 13);
   });
 }]);
 
