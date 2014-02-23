@@ -52,6 +52,8 @@ body {
 
 .leaflet-popup-content p.distance {
   border-top: 1px solid #ccc;
+  padding-top: 5px;
+  margin-top: 5px;
   color: #000;
   font-size: 16px;
 }
