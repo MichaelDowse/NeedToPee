@@ -4,7 +4,7 @@ var myApp = angular.module('spicyApp1', [
   'ngResource'
 ]);
 
-myApp.controller('PeeCtrl', ['$scope', '$resource', function($scope, $resource){
+myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope, $location, $resource){
   //TODO make this come from a server resource (cross domain fu on file:// resource hell)
   //var toiletResource = $resource('static/wellington.json');
   //$scope.toilets = toiletResource.get();
@@ -28,6 +28,7 @@ myApp.controller('PeeCtrl', ['$scope', '$resource', function($scope, $resource){
   // create a map in the "map" div, set the view to a given place and zoom
   //var map = L.map('map').setView([ centerMap[1],centerMap[0] ], 13);
   var map = L.map('map').setView(centerMap, 13);
+  window.map = map;
 
   // add an OpenStreetMap tile layer
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -35,11 +36,24 @@ myApp.controller('PeeCtrl', ['$scope', '$resource', function($scope, $resource){
   }).addTo(map);
 
   angular.forEach( $scope.locationData.features, function dropMarker(datum) {
-    console.log(datum);
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
       L.marker(datum.geometry.coordinates)
         .addTo(map)
         .bindPopup('Loo!')
     }
+  });
+
+  navigator.geolocation.getCurrentPosition( function setCenter(gps){
+    var centerOn = {
+      "lat": gps.coords.latatude,
+      "lng": gps.coords.longatude
+    };
+    console.log(
+      centerMap,
+      'vs',
+      $scope.firstRandom.geometry.coordinates
+    );
+    //console.log( "centre stage is " + JSON.stringify(centerMap) );
+    map.setView(centerOn, 13);
   });
 }]);
