@@ -1,4 +1,4 @@
 cityseen.github.io
 ==================
 
-This is repository of cityseen, "Travel more fun!"
+This is a repository of Need2Pee
