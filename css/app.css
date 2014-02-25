@@ -7768,18 +7768,18 @@ th.hide-for-touch {
 
 /* line 37, ../sass/_custom.sass */
 #social-network {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 /* line 40, ../sass/_custom.sass */
 #link-twitter, #link-fb {
   display: block;
   width: 50%;
-  height: 80px;
+  height: 40px;
   text-decoration: none;
   margin: 0 auto;
-  line-height: 80px;
-  text-indent: 80px;
+  line-height: 40px;
+  text-indent: 40px;
 }
 
 /* line 48, ../sass/_custom.sass */
