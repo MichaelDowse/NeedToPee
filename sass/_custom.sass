@@ -6,10 +6,7 @@ $gray: #BFBBA4
 $white: #EFF1E7
 $brown: #725E54
 $orange: #D9593A
-
-body
-	background-color: $green
-	// font-family: 'Lato', sans-serif
+$yellow: #F3E836
 
 #landing-bg
 	min-height: 100%
@@ -22,17 +19,36 @@ body
 #iphone-app
 	text-align: center
 
+.btn-try, #btn-try-small
+	background-color: $yellow
+	color: #000
+
 .btn-try
-	background-color: $orange
 	width: 200px
 	height: 40px
-	color: $white
 	padding: 10px
 	&:hover
 		height: 80px
 		width: 80px
 		background: url('../images/icon-toilet.png') center center no-repeat transparent
 		text-indent: -9999px
+
+// social media
+#social-network
+	margin-top: 30px
+
+#link-twitter, #link-fb
+	display: block
+	width: 50%
+	height: 80px
+	text-decoration: none
+	margin: 0 auto
+	line-height: 80px
+	text-indent: 80px
+#link-twitter
+	background: url('../images/icon-twitter.png') left center no-repeat transparent
+#link-fb
+	background: url('../images/icon-fb.png') left center no-repeat transparent
 
 @media #{$small-only}
 	#iphone-app 
@@ -44,12 +60,12 @@ body
 		text-align: center
 		margin-top: 30px
 	#btn-try-small
-		background-color: $orange
 		display: block
 		width: 200px
 		padding: 25px 0
-		color: $white
 		margin: 30px auto
+	#link-twitter, #link-fb
+		margin: 10px auto
 
 @media #{$medium-up}
 	#landing-bg
