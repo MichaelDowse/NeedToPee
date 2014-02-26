@@ -7772,7 +7772,7 @@ th.hide-for-touch {
 }
 
 /* line 40, ../sass/_custom.sass */
-#link-twitter, #link-fb {
+.link-twitter, .link-fb {
   display: block;
   width: 50%;
   height: 40px;
@@ -7783,12 +7783,12 @@ th.hide-for-touch {
 }
 
 /* line 48, ../sass/_custom.sass */
-#link-twitter {
+.link-twitter {
   background: url("../images/icon-twitter.png") left center no-repeat transparent;
 }
 
 /* line 50, ../sass/_custom.sass */
-#link-fb {
+.link-fb {
   background: url("../images/icon-fb.png") left center no-repeat transparent;
 }
 
@@ -7818,7 +7818,7 @@ th.hide-for-touch {
   }
 
   /* line 67, ../sass/_custom.sass */
-  #link-twitter, #link-fb {
+  .link-twitter, .link-fb {
     margin: 10px auto;
   }
 }
