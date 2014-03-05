@@ -6,6 +6,7 @@ var myApp = angular.module('spicyApp1', [
 
 $(document).ready(function(){
   $("#rate_button").click(function(event) {
+    console.log("login");
     Hull.login("facebook");
   });
   
