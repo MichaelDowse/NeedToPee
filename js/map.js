@@ -4,6 +4,14 @@ var myApp = angular.module('spicyApp1', [
   'ngResource'
 ]);
 
+$(document).ready(function(){
+  $("#rate_button").click(function(event) {
+    Hull.login("facebook");
+  });
+  
+  
+});
+
 myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope, $location, $resource){
   //TODO make this come from a server resource (cross domain fu on file:// resource hell)
   //var toiletResource = $resource('static/wellington.json');
@@ -57,6 +65,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       var bubbleContent = '';
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
       bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
+      bubbleContent += '<a href="#" id="rate_button">Rate this</a>';
       bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
