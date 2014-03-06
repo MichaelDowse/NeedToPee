@@ -93,7 +93,13 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     };
     // map.setView(userLocation, 15);
     
-    
+    var personMarker = L.AwesomeMarkers.icon({
+      icon: 'male',
+      prefix: 'fa',
+      markerColor: 'orange',
+      iconColor: 'white'
+    });
+    L.marker(userLocation, {icon: personMarker}).addTo(map);
 
     // Find closest loo
     var minDistance = 99999;
