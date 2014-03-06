@@ -48,7 +48,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   
   var coolMarker = L.AwesomeMarkers.icon({
       icon: 'fa-asterisk',
-      markerColor: 'red',
+      markerColor: 'blue',
       iconColor: 'white'
     });
   
