@@ -13,7 +13,7 @@
 #map {
   /* set later by jquery too... */
   height: 300px;
-  background: lightgreen;
+  background: #CCC;
 }
 
 #header {
@@ -38,6 +38,7 @@ body {
 
 .leaflet-popup-content-wrapper {
   border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
 }
 
 .leaflet-popup-content {
@@ -50,10 +51,11 @@ body {
   padding-top: 5px;
   margin-top: 5px;
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .leaflet-popup h2 {
+  font-size: 18px;
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #ccc;

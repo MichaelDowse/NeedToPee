@@ -47,7 +47,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   }).addTo(map);
   
   var coolMarker = L.AwesomeMarkers.icon({
-      icon: 'asterisk',
+      icon: '',
       prefix: 'fa',
       markerColor: 'blue',
       iconColor: 'white'
@@ -75,8 +75,9 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       // FIXME this should be templated
       var bubbleContent = '';
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
-      bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
-      bubbleContent += '<a href="#" id="rate_button">Rate this</a>';
+      // bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
+      // bubbleContent += '<a href="#" id="rate_button">Rate this</a>';
+      bubbleContent += '<p class=""><strong>Opening Hours</strong></p>';
       bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
