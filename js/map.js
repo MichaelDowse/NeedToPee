@@ -47,7 +47,8 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   }).addTo(map);
   
   var coolMarker = L.AwesomeMarkers.icon({
-      icon: 'fa-asterisk',
+      icon: 'asterisk',
+      prefix: 'fa',
       markerColor: 'blue',
       iconColor: 'white'
     });
