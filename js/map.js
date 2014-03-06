@@ -116,8 +116,9 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     closestMarker.getPopup().setContent(
       closestMarker.getPopup().getContent()
     );
-    
-    map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} )
+    console.log(closestMarker.getLatLng());
+    console.log(userLocation);
+    map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
     closestMarker.openPopup();
   });
 }]);
