@@ -41,10 +41,11 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
   var map = L.map('map').setView(centerMap, 13);
   window.map = map;
 
-  // add an OpenStreetMap tile layer
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  // add an OpenStreetMap tile layer http://{s}.tile.osm.org/{z}/{x}/{y}.png
+  L.tileLayer('http://a.tiles.mapbox.com/v3/michaeldowse.helo0de5/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
 
   angular.forEach( $scope.locationData.features, function dropMarker(datum) {
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
