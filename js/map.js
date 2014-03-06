@@ -91,7 +91,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       "lat": gps.coords.latitude,
       "lng": gps.coords.longitude
     };
-    map.setView(userLocation, 13);
+    map.setView(userLocation, 15);
 
     // Find closest loo
     var minDistance = 99999;
