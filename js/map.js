@@ -103,8 +103,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       minDistance = Math.min( minDistance, howFar );
 
       thisPopup.setContent(
-        thisPopup.getContent()
-        + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
+        thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
       );
 
       if ( minDistance === howFar ) {
