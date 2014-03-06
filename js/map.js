@@ -43,16 +43,23 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
   // add an OpenStreetMap tile layer http://{s}.tile.osm.org/{z}/{x}/{y}.png
   L.tileLayer('http://a.tiles.mapbox.com/v3/michaeldowse.helo0de5/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
+  
+  var coolMarker = L.AwesomeMarkers.icon({
+      icon: 'asterisk',
+      markerColor: 'red'
+    });
   
 
   angular.forEach( $scope.locationData.features, function dropMarker(datum) {
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
       var seed   = new Date().getTime()
       var rating = Math.floor( Math.random( seed ) * 5 ) + 1; // 1 to 5
-      var marker = L.marker(datum.geometry.coordinates).addTo(map);
+      var marker = L.marker(datum.geometry.coordinates, {icon: coolMarker}).addTo(map);
       markers.push( marker );
+      
+
 
       var stars;
       switch(rating) {
