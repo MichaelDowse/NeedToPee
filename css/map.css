@@ -47,25 +47,26 @@ body {
 
 .leaflet-popup-content p.hours,
 .leaflet-popup-content p.distance {
-  border-top: 1px solid #ccc;
-  padding-top: 5px;
+/*  border-top: 1px solid #ccc;
+*/  padding-top: 5px;
   margin-top: 5px;
   color: #000;
   font-size: 14px;
 }
 
 .leaflet-popup h2 {
-  font-size: 18px;
+  font-size: 17px;
+  margin-top: 10px;
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
 
-.leaflet-popup-content p {
+/*.leaflet-popup-content p {
   margin: 0;
   font-size: 30px;
   color: #fff200;
-}
+}*/
 
 .leaflet-popup-content p .grey {
   color: #ccc;
