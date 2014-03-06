@@ -45,8 +45,7 @@ body {
   margin: 10px;
 }
 
-.leaflet-popup-content p.hours,
-.leaflet-popup-content p.distance {
+.leaflet-popup-content p {
 /*  border-top: 1px solid #ccc;
 */  padding-top: 5px;
   margin-top: 5px;

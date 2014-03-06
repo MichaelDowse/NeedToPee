@@ -77,8 +77,8 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
       // bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
       // bubbleContent += '<a href="#" id="rate_button">Rate this</a>';
-      bubbleContent += '<p class=""><strong>Opening Hours</strong></p>';
-      bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
+      bubbleContent += '<p><strong>Opening Hours</strong><br />';
+      bubbleContent += datum.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
       window.loo = datum.properties;
@@ -103,7 +103,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
       thisPopup.setContent(
         thisPopup.getContent()
-        + '<p class="distance">' + Math.round(howFar) + ' metres away</p>'
+        + '<p class="distance">Distance<br />' + Math.round(howFar) + ' metres away</p>'
       );
 
       if ( minDistance === howFar ) {
