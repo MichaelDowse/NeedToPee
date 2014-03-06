@@ -81,6 +81,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       bubbleContent += datum.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
+
       window.loo = datum.properties;
     }
   });
