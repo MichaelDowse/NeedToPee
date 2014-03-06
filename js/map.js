@@ -91,7 +91,9 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       "lat": gps.coords.latitude,
       "lng": gps.coords.longitude
     };
-    map.setView(userLocation, 15);
+    // map.setView(userLocation, 15);
+    
+    
 
     // Find closest loo
     var minDistance = 99999;
@@ -114,7 +116,8 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     closestMarker.getPopup().setContent(
       closestMarker.getPopup().getContent()
     );
-
+    
+    map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} )
     closestMarker.openPopup();
   });
 }]);
