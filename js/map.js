@@ -90,6 +90,7 @@
 
   }]);
 $(document).ready(function(){
+  console.log("locating");
   navigator.geolocation.getCurrentPosition( function setCenter(gps){
     userLocation = {
       "lat": gps.coords.latitude,
