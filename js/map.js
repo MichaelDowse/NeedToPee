@@ -86,52 +86,56 @@
         window.loo = datum.properties;
       }
     });
+    
+    
+    
+    console.log("locating");
+    navigator.geolocation.getCurrentPosition( function setCenter(gps){
+      userLocation = {
+        "lat": gps.coords.latitude,
+        "lng": gps.coords.longitude
+      };
+      // map.setView(userLocation, 15);
+
+      var personMarker = L.AwesomeMarkers.icon({
+        icon: 'male',
+        prefix: 'fa',
+        markerColor: 'orange',
+        iconColor: 'white'
+      });
+      L.marker(userLocation, {icon: personMarker}).addTo(map);
+
+      // Find closest loo
+      var minDistance = 99999;
+      var closestMarker = markers[0];
+
+      angular.forEach( markers, function calculateDistance(thisMarker) {
+        var thisPopup = thisMarker.getPopup();
+        var howFar = thisMarker.getLatLng().distanceTo( userLocation );
+        minDistance = Math.min( minDistance, howFar );
+
+        thisPopup.setContent(
+          thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
+        );
+
+        if ( minDistance === howFar ) {
+          closestMarker = thisMarker;
+        }
+      });
+
+      closestMarker.getPopup().setContent(
+        closestMarker.getPopup().getContent()
+      );
+      console.log(closestMarker.getLatLng());
+      console.log(userLocation);
+      map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
+      closestMarker.openPopup();
+    });
 
 
   }]);
 $(document).ready(function(){
-  console.log("locating");
-  navigator.geolocation.getCurrentPosition( function setCenter(gps){
-    userLocation = {
-      "lat": gps.coords.latitude,
-      "lng": gps.coords.longitude
-    };
-    // map.setView(userLocation, 15);
 
-    var personMarker = L.AwesomeMarkers.icon({
-      icon: 'male',
-      prefix: 'fa',
-      markerColor: 'orange',
-      iconColor: 'white'
-    });
-    L.marker(userLocation, {icon: personMarker}).addTo(map);
-
-    // Find closest loo
-    var minDistance = 99999;
-    var closestMarker = markers[0];
-
-    angular.forEach( markers, function calculateDistance(thisMarker) {
-      var thisPopup = thisMarker.getPopup();
-      var howFar = thisMarker.getLatLng().distanceTo( userLocation );
-      minDistance = Math.min( minDistance, howFar );
-
-      thisPopup.setContent(
-        thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
-      );
-
-      if ( minDistance === howFar ) {
-        closestMarker = thisMarker;
-      }
-    });
-
-    closestMarker.getPopup().setContent(
-      closestMarker.getPopup().getContent()
-    );
-    console.log(closestMarker.getLatLng());
-    console.log(userLocation);
-    map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
-    closestMarker.openPopup();
-  });
   // hack hack, div needs to take up the whole page ;-)
   $('#map').css({
     'height': $(document).height()
