@@ -6,10 +6,6 @@
 	font-style: normal;
 }
 
-.icon {
-  font-family: 'Pictos';
-}
-
 /* placeholder styles for examples */
 #map {
   /* set later by jquery too... */
@@ -77,7 +73,10 @@ body {
 .leaflet-popup-content p {
   margin: 0;
   font-size: 30px;
+}
+.yellow {
   color: #fff200;
+  font-family: 'Pictos';
 }
 
 .leaflet-popup-content p .grey {
