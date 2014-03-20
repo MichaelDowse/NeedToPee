@@ -53,7 +53,12 @@ var wellingtonSampleData =
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
       bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
       bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
-
+								if ( datum.properties.Disabled === 'Yes' ) {
+						  	bubbleContent += '<img src="images/disabled.png"> ' + 'Disability friendly';
+						  }else {
+						  	bubbleContent += 'No Disability';
+						  	// return;
+						  }
       marker.bindPopup( bubbleContent );
       window.loo = datum.properties;
     }
