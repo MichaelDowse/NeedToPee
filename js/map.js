@@ -11,10 +11,10 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
 
   var userLocation = null;
   var markers = [];
-  $scope.locationData = wellingtonSampleData.vectorQuery.layers['2219'];
+  var locationData = wellingtonSampleData.vectorQuery.layers['2219'];
 
   // Fix geometry
-  $.map( $scope.locationData.features, function fixGeometry(feature) {
+  $.map( locationData.features, function fixGeometry(feature) {
     var longLat = feature.geometry.coordinates;
     feature.geometry.coordinates = {
       'lng': longLat[0],
@@ -22,7 +22,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     };
   });
 
-  $scope.fiveRandoms = $scope.locationData.features.slice(0,5);
+  $scope.fiveRandoms = locationData.features.slice(0,5);
   $scope.firstRandom  = $scope.fiveRandoms[0];
 
   var centerMap = $scope.firstRandom.geometry.coordinates;
@@ -37,7 +37,7 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  angular.forEach( $scope.locationData.features, function dropMarker(datum) {
+  angular.forEach( locationData.features, function dropMarker(datum) {
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
       var seed   = new Date().getTime()
       var rating = Math.floor( Math.random( seed ) * 5 ) + 1; // 1 to 5
