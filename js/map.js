@@ -47,19 +47,12 @@
           case 5 : yellowStars = 'S S S S S'; greyStars = ''; break;
         }
 
-        // FIXME this should be templated
-        var bubbleContent = '';
-        bubbleContent += '<p class="hours">' + datum.properties.Open_hours + '</p>';
-        if ( datum.properties.Disabled === 'Yes' ) {
-          bubbleContent += '<img src="images/disabled.png"> ' + 'Disability friendly';
-        }
-        else {
-          bubbleContent += 'No Disability';
-          // return;
-        }
+        // Convert to boolean for handlebars templates
+        datum.properties.Disabled = (datum.properties.Disabled === 'Yes');
 
         datum.yellowStars = yellowStars;
         datum.greyStars = greyStars;
+
         marker.bindPopup(
           bubbleTemplate(datum)
         );
