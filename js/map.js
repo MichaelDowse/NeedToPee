@@ -22,10 +22,8 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     };
   });
 
-  $scope.fiveRandoms = locationData.features.slice(0,5);
-  $scope.firstRandom  = $scope.fiveRandoms[0];
-
-  var centerMap = $scope.firstRandom.geometry.coordinates;
+  var randomToiletInWelly = locationData.features[0];
+  var centerMap = randomToiletInWelly.geometry.coordinates;
 
   // create a map in the "map" div, set the view to a given place and zoom
   //var map = L.map('map').setView([ centerMap[1],centerMap[0] ], 13);
