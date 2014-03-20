@@ -9,17 +9,26 @@
 .icon {
   font-family: 'Pictos';
 }
+
 /* placeholder styles for examples */
 #map {
   /* set later by jquery too... */
-  height: 300px;
+  position:absolute;
+  top:10%;
+  left:0;
+  height:90%;
+  width:100%;
   background: lightgreen;
 }
 
 #header {
-  height: 59px;
+  position: absolute;
+  height: 10%;
+  top: 0;
+  left: 0;
   border-bottom: 1px solid #ccc;
 }
+
 #header .icon {
   float: left;
 }

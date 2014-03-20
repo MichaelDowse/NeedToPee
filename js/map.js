@@ -97,10 +97,3 @@ myApp.controller('PeeCtrl', ['$scope', '$location', '$resource', function($scope
     closestMarker.openPopup();
   });
 }]);
-
-// hack hack, div needs to take up the whole page ;-)
-$('#map').css({
-  'height': (
-    $(document).height() - $('#header').height()
-  )
-});
