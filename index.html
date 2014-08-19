@@ -36,27 +36,6 @@
       <!-- map placement in javascript -->
     </div>
 
-    <script id="bubble-template" type="text/x-handlebars-template">
-      <!-- used by handebars to push bubble content into the page :) -->
-      <p>Hello world</p>
-      <h2>{{ properties.Location }}</h2>
-      <p class="yellow">
-        <span class="icon">
-          {{ yellowStars }}
-        </span>
-        <span class="grey icon">
-          {{ greyStars }}
-        </span>
-      </p>
-      <p>
-        {{#if properties.Disabled }}
-          <img src="images/disabled.png"> Disability friendly
-        {{else}}
-          No disability services
-        {{/if}}
-      </p>
-      <p class="hours">{{ properties.Open_hours }}</p>
-    </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
     <script src="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 	<script src="js/leaflet.awesome-markers.js"></script>

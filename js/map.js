@@ -69,9 +69,7 @@ $(document).ready(function(){
       bubbleContent += '<p><strong>Opening Hours</strong><br />';
       bubbleContent += datum.properties.Open_hours + '</p>';
 
-      // marker.bindPopup( bubbleContent );
-
-      // window.loo = datum.properties; // Doesn't do anything?
+      marker.bindPopup( bubbleContent );
     }
   });  
 
@@ -95,13 +93,13 @@ $(document).ready(function(){
     var closestMarker = markers[0];
 
     $.each( markers, function calculateDistance(index, thisMarker) {
-      // var thisPopup = thisMarker.getPopup();
+      var thisPopup = thisMarker.getPopup();
       var howFar = thisMarker.getLatLng().distanceTo( userLocation );
       var minDistance = Math.min( minDistance, howFar );
 
-      // thisPopup.setContent(
-      //   thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
-      // );
+      thisPopup.setContent(
+        thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
+      );
 
       if ( minDistance === howFar ) {
         closestMarker = thisMarker;
@@ -110,12 +108,11 @@ $(document).ready(function(){
     });
     map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
 
-    // closestMarker.getPopup().setContent(
-    //   closestMarker.getPopup().getContent()
-    // );
+    closestMarker.getPopup().setContent(
+      closestMarker.getPopup().getContent()
+    );
 
-    
-    // closestMarker.openPopup();
+    closestMarker.openPopup();
   });
 });
 
