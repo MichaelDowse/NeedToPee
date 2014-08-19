@@ -6,9 +6,6 @@
 	font-style: normal;
 }
 
-.icon {
-  font-family: 'Pictos';
-}
 /* placeholder styles for examples */
 #map {
   /* set later by jquery too... */
@@ -17,9 +14,13 @@
 }
 
 #header {
-  height: 59px;
+  position: absolute;
+  height: 10%;
+  top: 0;
+  left: 0;
   border-bottom: 1px solid #ccc;
 }
+
 #header .icon {
   float: left;
 }
@@ -65,6 +66,8 @@ body {
 /*.leaflet-popup-content p {
   margin: 0;
   font-size: 30px;
+}
+.yellow {
   color: #fff200;
 }*/
 
