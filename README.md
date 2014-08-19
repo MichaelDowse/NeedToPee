@@ -1,7 +1,7 @@
 Need2Pee
 ==================
 
-NeedToPee is a website for finding the nearest bathroom when you really, really need it.
+NeedToPee is a website for finding the nearest bathroom when you really, really need it. The site is hosted on Github Pages and is available at http://NeedToPee.me.
 
 
 Coverage
