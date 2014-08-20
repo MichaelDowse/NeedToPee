@@ -95,16 +95,15 @@ $(document).ready(function(){
     $.each( markers, function calculateDistance(index, thisMarker) {
       var thisPopup = thisMarker.getPopup();
       var howFar = thisMarker.getLatLng().distanceTo( userLocation );
-      var minDistance = Math.min( minDistance, howFar );
+      minDistance = Math.min( minDistance, howFar );
 
       thisPopup.setContent(
         thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
       );
 
-      if ( minDistance == howFar ) {
+      if ( minDistance == howFar ) {        
         closestMarker = thisMarker;
       }
-      
     });
     map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
 
