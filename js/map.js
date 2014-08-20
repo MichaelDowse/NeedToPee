@@ -5,9 +5,9 @@ $(document).ready(function(){
   $('#map').css({
     'height': $(document).height()
   });
-  
-  
+
   //TODO make this come from a server resource (cross domain fu on file:// resource hell)
+  // Would be nice but probably not worth the performance hit
   //var toiletResource = $resource('static/wellington.json');
   //$scope.toilets = toiletResource.get();
 
@@ -23,11 +23,8 @@ $(document).ready(function(){
     };
   });
 
-  fiveRandoms = locationData.features.slice(0,5);
-  var firstRandom  = fiveRandoms[0];
-  //
-  var centerMap = firstRandom.geometry.coordinates;
-
+  // A random start point, should be somewhere central
+  var centerMap = locationData.features[10].geometry.coordinates;
   // create a map in the "map" div, set the view to a given place and zoom
   var map = L.map('map').setView(centerMap, 13);
   window.map = map;
@@ -47,25 +44,12 @@ $(document).ready(function(){
   var markers = []
   $.each( locationData.features, function dropMarker(index, datum) {
     if ( datum && datum.geometry && datum.geometry.coordinates ) {
-      var seed   = new Date().getTime()
-      var rating = Math.floor( Math.random( seed ) * 5 ) + 1; // 1 to 5
       var marker = L.marker(datum.geometry.coordinates, {icon: coolMarker}).addTo(map);
       markers.push( marker );
-
-      var stars;
-      switch(rating) {
-        case 1 : stars = 'S <span class="grey">S S S S</span>';     break;
-        case 2 : stars = 'S S <span class="grey">S S S</span>';    break;
-        case 3 : stars = 'S S S <span class="grey">S S</span>';   break;
-        case 4 : stars = 'S S S S <span class="grey">S</span>';  break;
-        case 5 : stars = 'S S S S S'; break;
-      }
 
       // FIXME this should be templated
       var bubbleContent = '';
       bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
-      // bubbleContent += '<p><span class="icon">' + stars + '</span></p>';
-      // bubbleContent += '<a href="#" id="rate_button">Rate this</a>';
       bubbleContent += '<p><strong>Opening Hours</strong><br />';
       bubbleContent += datum.properties.Open_hours + '</p>';
 
@@ -110,9 +94,3 @@ $(document).ready(function(){
     closestMarker.openPopup();
   });
 });
-
-
-
-
-
-
