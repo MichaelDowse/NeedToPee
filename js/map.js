@@ -78,7 +78,7 @@ $(document).ready(function(){
       "lat": gps.coords.latitude,
       "lng": gps.coords.longitude
     };
-    map.setView(userLocation, 15);
+    //map.setView(userLocation, 15);
 
     var personMarker = L.AwesomeMarkers.icon({
       icon: 'male',
@@ -90,7 +90,7 @@ $(document).ready(function(){
 
     // Find closest loo
     var minDistance = 99999;
-    var closestMarker = markers[0];
+    closestMarker = markers[0];
 
     $.each( markers, function calculateDistance(index, thisMarker) {
       var thisPopup = thisMarker.getPopup();
@@ -101,16 +101,12 @@ $(document).ready(function(){
         thisPopup.getContent() + '<p class="distance"><strong>Distance</strong><br />' + Math.round(howFar) + ' metres away</p>'
       );
 
-      if ( minDistance === howFar ) {
+      if ( minDistance == howFar ) {
         closestMarker = thisMarker;
       }
       
     });
     map.fitBounds([closestMarker.getLatLng(), userLocation], {"padding": [100,100]} );
-
-    closestMarker.getPopup().setContent(
-      closestMarker.getPopup().getContent()
-    );
 
     closestMarker.openPopup();
   });
