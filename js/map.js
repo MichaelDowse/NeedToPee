@@ -8,8 +8,8 @@ $(document).ready(function(){
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
-  $.getJSON( "wellington.json", function( data ) {
-    window.markers = add_data_to_map(data);
+  $.getJSON("locations.json", function(data) {
+    window.markers = add_data_to_map(data.locations);
   });
 
   navigator.geolocation.getCurrentPosition( function setCenter(gps){
@@ -31,10 +31,9 @@ $(document).ready(function(){
   });
 });
 
-function add_data_to_map(wellingtonSampleData) {
+function add_data_to_map(locationData) {
   // Reformat coordinates json
-  var locationData = wellingtonSampleData.vectorQuery.layers['2219'];
-  $.map( locationData.features, function fixGeometry(feature) {
+  $.map(locationData, function fixGeometry(feature) {
     var longLat = feature.geometry.coordinates;
     feature.geometry.coordinates = {
       'lng': longLat[0],
@@ -54,16 +53,16 @@ function add_data_to_map(wellingtonSampleData) {
   });
 
   var markers = []
-  $.each( locationData.features, function dropMarker(index, datum) {
-    if ( datum && datum.geometry && datum.geometry.coordinates ) {
-      var marker = L.marker(datum.geometry.coordinates, {icon: coolMarker}).addTo(map);
+  $.each(locationData, function dropMarker(index, feature) {
+    if ( feature && feature.geometry && feature.geometry.coordinates ) {
+      var marker = L.marker(feature.geometry.coordinates, {icon: coolMarker}).addTo(map);
       markers.push( marker );
 
-      // FIXME this should be templated
+      // TODO this should be templated
       var bubbleContent = '';
-      bubbleContent += '<h2>' + datum.properties.Location + '</h2>';
+      bubbleContent += '<h2>' + feature.properties.Location + '</h2>';
       bubbleContent += '<p><strong>Opening Hours</strong><br />';
-      bubbleContent += datum.properties.Open_hours + '</p>';
+      bubbleContent += feature.properties.Open_hours + '</p>';
 
       marker.bindPopup( bubbleContent );
     }
