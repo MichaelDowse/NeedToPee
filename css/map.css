@@ -10,7 +10,7 @@
 #map {
   /* set later by jquery too... */
   margin-top: 60px; /* Space for the header */
-  height: 100%; /* Doesn't seem to do anything */
+  height: 100vh; /* http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window */
   background: #E6E6E6;
 }
 
@@ -65,14 +65,6 @@ body {
   margin-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
-
-/*.leaflet-popup-content p {
-  margin: 0;
-  font-size: 30px;
-}
-.yellow {
-  color: #fff200;
-}*/
 
 .leaflet-popup-content p .grey {
   color: #ccc;
