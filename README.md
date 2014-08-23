@@ -14,6 +14,28 @@ Coverage
 NeedToPee currently only supports publice bathrooms administered by the Wellington City Council in the Wellington region.
 
 
+Location Data
+==================
+
+Location data should be provided in, or converted to a json array of locations. A location is a json object (described below) which must include a set of gps coordinates and may include a series of properties describing the facility which will be displayed directly to the user. All properties are optional but recommended.
+
+    {
+      'type' : 'Toilet'
+      'geometry' : {
+        'type' : 'Point'
+        'coordinates' : [{gps_x_coordinate}, {gps_y_coordinate}]
+        'properties' : {
+          'Open_hours' : '24 Hours'      // The facilities open hours, no format specified
+          'Disabled' : 'Yes'             // Are facilities for disabled persons are available at this location? Yes or No
+          'Suburb' : 'Wadestown'
+          'Location' : 'Wadestown Road'  // Additional location details
+          'Type' : 'Unisex'              // Other possible values: Male, Female
+          'Change_room' : 'Yes'          // Are baby changing facilities available at this location? Yes or No
+        }
+      }
+    }
+
+
 Contributors
 ==================
 
