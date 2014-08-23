@@ -1,7 +1,12 @@
 $(document).ready(function(){
-  // create a map in the "map" div, set the view to a given place and zoom
-  var map = L.map('map');
-  window.map = map;
+  // create a map in the "map" div
+  window.map = L.map('map');
+  // Start the map at the centre of Wellington
+  wellingtonCentral = {
+    'lng': 174.776172,
+    'lat': -41.288734
+  }
+  window.map.setView(wellingtonCentral, 13);
 
   // add an OpenStreetMap tile layer http://{s}.tile.osm.org/{z}/{x}/{y}.png
   L.tileLayer('http://a.tiles.mapbox.com/v3/michaeldowse.helo0de5/{z}/{x}/{y}.png', {
@@ -40,13 +45,6 @@ function add_data_to_map(locationData) {
       'lat': longLat[1]
     };
   });
-
-  // Start the map at the centre of Wellington
-  wellingtonCentral = {
-    'lng': 174.776172,
-    'lat': -41.288734
-  }
-  window.map.setView(wellingtonCentral, 13);
 
   var coolMarker = L.AwesomeMarkers.icon({
     markerColor: 'blue'
