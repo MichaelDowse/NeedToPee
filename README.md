@@ -11,7 +11,7 @@ The site is hosted on Github Pages and is available at http://NeedToPee.me. Mast
 Coverage
 ==================
 
-NeedToPee currently only supports publice bathrooms administered by the Wellington City Council in the Wellington region.
+NeedToPee currently only supports public bathrooms administered by the Wellington City Council in the Wellington region.
 
 
 Location Data
