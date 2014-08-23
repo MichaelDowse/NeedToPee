@@ -1,4 +1,4 @@
-Need2Pee
+NeedToPee
 ==================
 
 NeedToPee is a website for finding the nearest bathroom when you really, really need it.
