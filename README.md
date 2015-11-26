@@ -5,7 +5,7 @@ NeedToPee is a website for finding the nearest bathroom when you really, really 
 
 Product development is managed on a private Trello Board available here: https://trello.com/b/kxg2wiJv/pee
 
-The site is hosted on Github Pages and is available at http://NeedToPee.me. Master is used as a development branch, the gh-pages branch represents what is currently in production.
+The site is hosted on Github Pages and is available at http://michaeldowse.github.io/NeedToPee. Master is used as a development branch, the gh-pages branch represents what is currently in production.
 
 
 Coverage
